@@ -1,15 +1,27 @@
 <script>
   export default {
-      setup() {
-          
-    }
+    setup() {
+    },
+    components: { FormCadastro }
 }
+
+import FormCadastro from '../components/FormCadastro.vue';
 </script>
 
 
 <template>
 
-    <h1> AGR FOI </h1>
+  <div class="container">
+    <FormCadastro />
+  </div>
 
 </template>
+
+<style scoped>
+
+  .container {
+    justify-content: center;
+  }
+
+</style>
   
