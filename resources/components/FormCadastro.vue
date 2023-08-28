@@ -14,7 +14,7 @@ import FormPasswordField from './FormPasswordField.vue'
 
             <form action="" method="POST" class="form-cadastro">
 
-                <label for="username">Username</label>
+                <label for="username"><span class="username-text">Username</span></label>
                 <FormField v-model:title="username"/>
 
                 <label for="email">Enter your email</label>
@@ -55,8 +55,19 @@ import FormPasswordField from './FormPasswordField.vue'
     }
 
     .form-cadastro {
+        display: inline-flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
         gap: 30px;
     }
 
+    .username-text {
+        color: rgba(0, 0, 0, 0.70);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 </style>
