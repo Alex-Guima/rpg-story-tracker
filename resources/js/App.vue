@@ -2,19 +2,21 @@
   export default {
     setup() {
     },
-    components: { FormCadastro }
+    components: { FormCadastro, RpgStoryTracker, SignUpFrame, BtnCadastro }
 }
 
 import FormCadastro from '../components/FormCadastro.vue';
+import RpgStoryTracker from '../components/RpgStoryTracker.vue';
+import SignUpFrame from '../components/SignUpFrame.vue';
 import BtnCadastro from '../components/BtnCadastro.vue';
+
 </script>
 
 
 <template>
 
   <div class="container">
-    <FormCadastro />
-    <BtnCadastro />
+    <SignUpFrame />
   </div>
 
 </template>
@@ -22,14 +24,11 @@ import BtnCadastro from '../components/BtnCadastro.vue';
 <style scoped>
 
   .container {
-    justify-content: center;
-    fill: #F9EEE5;
-    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.67));
-    backdrop-filter: blur(2px);
+    box-sizing: border-box;
+    display: flex;
 
-    width: 831px;
-    height: 805px;
-  }
+    align-items: center;
+    }
 
 </style>
   

@@ -37,37 +37,16 @@ import FormPasswordField from './FormPasswordField.vue'
 
 
 <style>
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 8px;
-
-        width: 831px;
-        height: 805px;
-
-        fill: #F9EEE5;
-        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.67));
-        backdrop-filter: blur(2px);
-
-        border-radius: 45px;
-    }
-
     .form-cadastro {
+        box-sizing: border-box;
+        
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 30px;
+
+        
     }
 
-    .username-text {
-        color: rgba(0, 0, 0, 0.70);
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
 </style>
