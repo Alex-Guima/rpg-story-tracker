@@ -21,14 +21,12 @@
 <style>
 
 .form-field {
-        box-sizing: border-box;
-
         display: flex;
-        width: 400px;
-        height: 48px;
-        padding: 12px 16px;
+        width: 25rem;
+        height: 3rem;
+        padding: 0.75rem 1rem;
         align-items: center;
-        gap: 10px;
+        gap: 0.625rem;
 
         border-radius: 4px;
         border: 2px solid #D04B12;

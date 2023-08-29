@@ -15,18 +15,9 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 <template>
 
     <div class="sign-up">
-
-
-        <div class="title">
-            <RpgStoryTracker />
-        </div>
-        <div class="form">
-            <FormCadastro />
-        </div>
-        <div class="button">
-            <BtnCadastro />
-        </div>
-
+      <RpgStoryTracker />
+      <FormCadastro />
+      <BtnCadastro />
     </div>
 
 </template>
@@ -36,21 +27,17 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 .sign-up {
     box-sizing: border-box;
 
-    border-radius: 45px;
+    border-radius: 2.8125rem;
     background: #F9EEE5;
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.67);
+    box-shadow: 0px 0.25rem 0.375rem 0px rgba(0, 0, 0, 0.67);
     backdrop-filter: blur(2px);
 
-    width: 833px;
-    height: 808px;
+    width: 52.0625rem;
+    height: 50.5rem;
 
-
-  }
-
-  .form {
-    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    
   }
 
 

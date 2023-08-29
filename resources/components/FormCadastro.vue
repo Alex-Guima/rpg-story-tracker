@@ -7,9 +7,6 @@ import FormPasswordField from './FormPasswordField.vue'
 
 
 <template>
-
-    <div class="background">
-
         <div class="container">
 
             <form action="" method="POST" class="form-cadastro">
@@ -30,23 +27,22 @@ import FormPasswordField from './FormPasswordField.vue'
             </form>
 
         </div>
-
-    </div>
-
 </template>
 
 
 <style>
+
     .form-cadastro {
         box-sizing: border-box;
-        
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 30px;
 
-        
+        padding-left: 13.5625rem;
+        padding-bottom: 5rem;
     }
+
 
 </style>

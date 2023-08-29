@@ -11,8 +11,8 @@
 
 <template>
 
-    <div class="text">
-        <h1>RPG STORY TRACKER</h1>
+    <div class="container">
+        <h1 class="text">RPG STORY TRACKER</h1>
     </div>
 
 </template>
@@ -22,13 +22,12 @@
     .text {
         color: #201A1A;
         text-align: center;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
         font-family: Girassol;
-        font-size: 64px;
+        font-size: 4rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-
     }
 
 </style>

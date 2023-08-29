@@ -24,11 +24,10 @@ import BtnCadastro from '../components/BtnCadastro.vue';
 <style scoped>
 
   .container {
-    box-sizing: border-box;
-    display: flex;
-
     align-items: center;
-    }
+
+    padding: 8.5rem 34rem;
+  }
 
 </style>
   
