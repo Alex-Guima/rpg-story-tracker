@@ -5,8 +5,8 @@ import FormLogin from './FormLogin.vue';
 
 <template>
     <div class="container">
-        <BtnLogin />
         <FormLogin />
+        <BtnLogin />
     </div>
     
 </template>

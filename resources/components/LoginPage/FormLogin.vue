@@ -5,7 +5,7 @@
 <template>
 
         <form class="Usuario">
-            <label for="Usuario">Email or Usarname</label>
+            <label for="Usuario">Email or Username</label>
             <input type="text">
 
             <label for="Senha">Password</label>
@@ -13,3 +13,9 @@
         </form>
 
 </template>
+
+<style>
+  
+  
+  
+</style>

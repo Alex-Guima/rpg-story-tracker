@@ -3,6 +3,6 @@ import './bootstrap';
 import {createApp} from 'vue'
 
 
-import LoginPage from '../components/LoginPage/LoginPage.vue'
+import SignUpPage from '../components/SignUpPage/SignUpPage.vue'
 
-createApp(LoginPage).mount("#app")
+createApp(SignUpPage).mount("#app")
