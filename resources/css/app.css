@@ -1,1 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+:root {
+    --white: #fff;
+    --orange-500: #D04B12;
+    --orange-800: #E24806;
+}
+
+:focus {
+    outline: transparent;
+    box-shadow: var(--orange-800);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

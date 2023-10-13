@@ -8,7 +8,7 @@
 <template>
     <div class="container">
 
-        <div class="form-title">
+        <div>
             <input
             class="form-field"
             :type="text"
@@ -30,13 +30,12 @@
         padding: 0.75rem 1rem;
         align-items: center;
         gap: 0.625rem;
-
-        border-radius: 4px;
-        border: 2px solid #D04B12;
         background: #FEE5C1;
+        border-radius: 4px;
+        font-size: medium;   
+    }
 
-        font-size: medium;
-
-        
+    .form-field:focus {
+        border: 2px solid #D04B12;
     }
 </style>

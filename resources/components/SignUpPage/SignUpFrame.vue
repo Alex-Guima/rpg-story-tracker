@@ -1,13 +1,12 @@
 <script>
-import BtnCadastro from './BtnCadastro.vue';
-import FormCadastro from './FormCadastro.vue';
+import FormCadastro from './SignUpForm.vue';
 import RpgStoryTracker from './RpgStoryTracker.vue';
 
 
     export default {
     setup() {
     },
-    components: { FormCadastro, RpgStoryTracker, BtnCadastro }
+    components: { FormCadastro, RpgStoryTracker }
 }
 
 </script>
@@ -17,7 +16,6 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
     <div class="sign-up">
       <RpgStoryTracker />
       <FormCadastro />
-      <BtnCadastro />
     </div>
 
 </template>
@@ -25,18 +23,18 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 <style>
 
 .sign-up {
-    box-sizing: border-box;
-
-    border-radius: 2.8125rem;
-    background: #F9EEE5;
-    box-shadow: 0px 0.25rem 0.375rem 0px rgba(0, 0, 0, 0.67);
+    border-radius: 45px;
+    background: #f9eee5b6;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.67);
     backdrop-filter: blur(2px);
 
-    width: 52.0625rem;
-    height: 50.5rem;
+    width: 700px;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     
   }
 

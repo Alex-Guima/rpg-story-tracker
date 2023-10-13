@@ -7,7 +7,7 @@
 
 
 <template>
-    <div class="form-title">
+    <div>
         <input
         class="form-field"
         type="password"
@@ -29,10 +29,17 @@
         gap: 0.625rem;
 
         border-radius: 4px;
-        border: 2px solid #D04B12;
         background: #FEE5C1;
 
         font-size: medium;
+        transition: 0.1s;
     }
 
+    .form-field:focus {
+        border: 2px solid var(--orange-800);
+    }
+
+    .form-field:hover {
+        border: 2px solid var(--orange-500)
+    }
 </style>

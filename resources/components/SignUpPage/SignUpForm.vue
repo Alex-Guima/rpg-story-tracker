@@ -23,7 +23,7 @@ import FormPasswordField from './FormPasswordField.vue'
                 <label for="confirm-password">Confirm your password</label>
                 <FormPasswordField v-model:title="confirmPassword"/>
 
-
+                <input class="btn-cadastro" type="submit" value="Create Account">
             </form>
 
         </div>
@@ -34,15 +34,42 @@ import FormPasswordField from './FormPasswordField.vue'
 
     .form-cadastro {
         box-sizing: border-box;
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 30px;
-
-        padding-left: 13.5625rem;
-        padding-bottom: 5rem;
+        line-height: 1.6;
+        gap: 10px;
     }
+
+    .btn-cadastro {
+        box-sizing: border-box;
+        display: flex;
+        width: 400px;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 16px;
+        margin: 20px 0px;
+
+        border: 0;
+        background: #D04B12;
+        box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+
+        transition: 0.1s;
+
+        color: #FFF;
+        font-family: Inter;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.6;
+  }
+
+  .btn-cadastro:hover {
+    background: #e24806;
+  }
+  
+  .btn-cadastro:active {
+    box-shadow: black;
+  }
 
 
 </style>

@@ -20,13 +20,13 @@
 <style>
 
     .text {
-        color: #201A1A;
+        color: black;
         text-align: center;
         text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
         font-family: Girassol;
         font-size: 4rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: bold;
         line-height: normal;
     }
 
