@@ -22,11 +22,9 @@
 
 .form-field {
         display: flex;
-        width: 25rem;
-        height: 3rem;
-        padding: 0.75rem 1rem;
+        padding: 12px 16px;
         align-items: center;
-        gap: 0.625rem;
+        gap: 10px;
 
         border-radius: 4px;
         background: #FEE5C1;
@@ -40,6 +38,6 @@
     }
 
     .form-field:hover {
-        border: 2px solid var(--orange-500)
+        border: 2px solid var(--orange-800)
     }
 </style>

@@ -23,19 +23,14 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 <style>
 
 .sign-up {
-    border-radius: 45px;
-    background: #f9eee5b6;
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.67);
-    backdrop-filter: blur(2px);
-
-    width: 700px;
-
+    background: #f9eee5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    
+    width: 735px;
+    height: auto;
   }
 
 

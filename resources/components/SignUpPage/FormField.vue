@@ -24,9 +24,8 @@
     .form-field {
         box-sizing: border-box;
 
+        width: 400px;
         display: flex;
-        width: 25rem;
-        height: 3rem;
         padding: 0.75rem 1rem;
         align-items: center;
         gap: 0.625rem;
@@ -36,6 +35,6 @@
     }
 
     .form-field:focus {
-        border: 2px solid #D04B12;
+        border: 2px solid var(--orange-800);
     }
 </style>

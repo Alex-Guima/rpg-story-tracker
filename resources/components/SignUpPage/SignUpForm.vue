@@ -53,18 +53,18 @@ import FormPasswordField from './FormPasswordField.vue'
         background: #D04B12;
         box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
 
-        transition: 0.1s;
+        transition: 0.01s;
 
-        color: #FFF;
+        color: var(--white);
         font-family: Inter;
         font-size: 0.875rem;
         font-style: normal;
-        font-weight: 600;
+        font-weight: bold;
         line-height: 1.6;
   }
 
   .btn-cadastro:hover {
-    background: #e24806;
+    background: var(--orange-800);
   }
   
   .btn-cadastro:active {
