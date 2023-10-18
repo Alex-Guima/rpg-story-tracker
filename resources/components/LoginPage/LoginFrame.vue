@@ -5,6 +5,7 @@ import FormLogin from './FormLogin.vue';
 
 <template>
     <div class="container">
+        <h1>RPG STORY TRACKER</h1>
         <FormLogin />
         <BtnLogin />
     </div>
@@ -12,6 +13,11 @@ import FormLogin from './FormLogin.vue';
 </template>
 
 <style>
+    h1 {
+        font-family: "Girassol"; 
+        font-weight: 400;
+        font-size: 58px;
+    }
     .container {
         display: flex;
         align-items: center;

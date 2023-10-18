@@ -15,18 +15,18 @@
 </template>
 
 <style>
+    .Formulario{
+        display: flex;
+        flex-direction: column;
+    }
     .Formulario input{
         box-sizing: border-box;
-
-        width: 300px;
-        display: flex;
-        padding: 0.75rem 1rem;
-        align-items: center;
-        gap: 0.625rem;
-        background: #FEE5C1;
+        width: 400px;
+        height: 48px;
+        background-color: #FEE5C1;
         border-radius: 4px;
-        font-size: medium; 
         border-color: #D04B12;
+        line-height: 1.6;
     }
   
 </style>
