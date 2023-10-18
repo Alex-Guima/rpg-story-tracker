@@ -5,7 +5,15 @@ import LoginFrame from './LoginFrame.vue';
 </script>
 
 <template>
-
+    <div class="Frame">
     <LoginFrame />
+    </div>
 
 </template>
+
+<style scoped>
+    body {
+        align-items: center;
+    
+    }
+</style>

@@ -10,3 +10,11 @@ import FormLogin from './FormLogin.vue';
     </div>
     
 </template>
+
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>

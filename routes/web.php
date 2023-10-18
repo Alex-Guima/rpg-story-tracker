@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/SignUp', function() {
     return view('signUp');
 });
+
+Route::get('/Login', function() {
+    return view('login');
+});
