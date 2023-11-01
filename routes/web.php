@@ -24,3 +24,7 @@ Route::get('/SignUp', function() {
 Route::get('/Login', function() {
     return view('login');
 });
+
+Route::get('/Campaign', function() {
+    return view('campaign');
+});

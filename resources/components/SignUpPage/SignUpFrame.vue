@@ -1,6 +1,6 @@
 <script>
 import FormCadastro from './SignUpForm.vue';
-import RpgStoryTracker from './RpgStoryTracker.vue';
+import RpgStoryTracker from '../RpgStoryTracker.vue';
 
 
     export default {
@@ -28,7 +28,7 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     width: 735px;
     height: auto;
   }

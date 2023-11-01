@@ -1,11 +1,6 @@
-<script>
+<script setup>
 
-    export default {
-        setup() {
 
-        }
-    }
-    
 
 </script>
 
