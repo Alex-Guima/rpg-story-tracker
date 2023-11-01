@@ -5,14 +5,10 @@
 </script>
 
 <template>
-
-    <div class="container">
-        <h1 class="text">RPG STORY TRACKER</h1>
-    </div>
-
+    <h1 class="text">RPG STORY TRACKER</h1>
 </template>
 
-<style>
+<style scoped>
 
     .text {
         color: black;

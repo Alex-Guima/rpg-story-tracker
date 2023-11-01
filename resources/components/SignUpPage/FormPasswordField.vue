@@ -18,19 +18,21 @@
 
 </template>
 
-<style>
+<style scoped>
 
 .form-field {
-        display: flex;
-        padding: 12px 16px;
-        align-items: center;
-        gap: 10px;
+    box-sizing: border-box;
+    display: flex;
+    width: 400px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 10px;
 
-        border-radius: 4px;
-        background: #FEE5C1;
+    border-radius: 4px;
+    background: #FEE5C1;
 
-        font-size: medium;
-        transition: 0.1s;
+    font-size: medium;
+    transition: 0.1s;
     }
 
     .form-field:focus {

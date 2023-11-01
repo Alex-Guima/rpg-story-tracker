@@ -23,14 +23,14 @@ import FormPasswordField from './FormPasswordField.vue'
                 <label for="confirm-password">Confirm your password</label>
                 <FormPasswordField v-model:title="confirmPassword"/>
 
-                <input class="btn-cadastro" type="submit" value="Create Account">
+                <button @click="" class="btn-cadastro" type="button">Create Account</button>
             </form>
 
         </div>
 </template>
 
 
-<style>
+<style scoped>
 
     .form-cadastro {
         box-sizing: border-box;

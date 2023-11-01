@@ -17,7 +17,7 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
     </nav>
 </template>
 
-<style>
+<style scoped>
 
     nav {
         display: flex;

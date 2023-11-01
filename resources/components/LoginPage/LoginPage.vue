@@ -1,22 +1,20 @@
 <script setup>
-import BtnLogin from './BtnLogin.vue';
 import LoginFrame from './LoginFrame.vue';
 
 </script>
 
 <template>
-    
-    <div class="Frame">
-    <LoginFrame />
+    <div class="container">
+        <LoginFrame />
     </div>
 
 </template>
 
 <style scoped>
-    head {
+    .container {
+        display: flex;
+        box-sizing: border-box;
         
-    }
-    body {
         align-items: center;
         justify-content: center;
     }

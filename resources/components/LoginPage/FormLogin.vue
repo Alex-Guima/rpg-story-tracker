@@ -4,7 +4,7 @@
 </script>
 <template>
 
-        <form class="Formulario">
+        <form class="form">
             <label for="Usuario">Email or Username</label>
             <input type="text">
 
@@ -14,12 +14,12 @@
 
 </template>
 
-<style>
-    .Formulario{
+<style scoped>
+    .form{
         display: flex;
         flex-direction: column;
     }
-    .Formulario input{
+    .form input{
         box-sizing: border-box;
         width: 400px;
         height: 48px;

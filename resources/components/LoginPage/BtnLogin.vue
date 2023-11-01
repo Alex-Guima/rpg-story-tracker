@@ -4,9 +4,7 @@
 
 <template>
 
-    <div class="container">
-      <button class="login" type="submit"><span class="textoBtnlogin">Login</span></button>
-    </div>
+  <button class="login" type="submit"><span class="textoBtnlogin">Login</span></button>
 
 </template>
 
@@ -19,21 +17,16 @@
     justify-content: center;
     align-items: center;
 
-    background: #D04B12;
+    background: var(--orange-500);
     box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
   }
 
   .textoBtnlogin {
-    color: #FFF;
-    font-family: Inter;
+    color: var(--white);
+    font-family: 'Inter';
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
-  }
-
-  .container {
-    padding-left: 13.5rem;
-    padding-bottom: 5rem;
+    line-height: 1.6;
   }
 </style>

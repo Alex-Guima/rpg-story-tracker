@@ -20,15 +20,15 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     .form-field {
         box-sizing: border-box;
 
         width: 400px;
         display: flex;
-        padding: 0.75rem 1rem;
+        padding: 12px 16px;
         align-items: center;
-        gap: 0.625rem;
+        gap: 10px;
         background: #FEE5C1;
         border-radius: 4px;
         font-size: medium;   

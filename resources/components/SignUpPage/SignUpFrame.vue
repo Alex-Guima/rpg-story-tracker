@@ -1,12 +1,12 @@
 <script>
-import FormCadastro from './SignUpForm.vue';
+import SignUpForm from './SignUpForm.vue';
 import RpgStoryTracker from '../RpgStoryTracker.vue';
 
 
     export default {
     setup() {
     },
-    components: { FormCadastro, RpgStoryTracker }
+    components: { SignUpForm, RpgStoryTracker }
 }
 
 </script>
@@ -15,12 +15,12 @@ import RpgStoryTracker from '../RpgStoryTracker.vue';
 
     <div class="sign-up">
       <RpgStoryTracker />
-      <FormCadastro />
+      <SignUpForm />
     </div>
 
 </template>
 
-<style>
+<style scoped>
 
 .sign-up {
     background: #f9eee5;
