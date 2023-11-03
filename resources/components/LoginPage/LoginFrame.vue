@@ -10,7 +10,7 @@ import FormLogin from './FormLogin.vue';
         <FormLogin />
         <BtnLogin />
     </div>
-    
+
 </template>
 
 <style scoped>

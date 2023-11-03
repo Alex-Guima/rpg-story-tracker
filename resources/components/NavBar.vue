@@ -5,14 +5,12 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 
 <template>
     <nav>
-        <RpgStoryTracker  />
-
-        <div class="list-container">
-            <ul>
-                <li>Home</li>
-                <li>Sobre Nós</li>
-                <li><img src="../../public/User_Circle.svg" alt="User Symbol"></li>
-            </ul>
+        <div class="left">
+            <a href="/"><RpgStoryTracker  /></a>
+        </div>
+        <div class="right">
+            <span class="about"><a href="/About">ABOUT</a></span>
+            <a href=""><img src="../../public/User_Circle.svg" alt="User Icon"></a>
         </div>
     </nav>
 </template>
@@ -20,25 +18,40 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 <style scoped>
 
     nav {
-        display: flex;
-        flex-direction: row;
+        margin: 0;
+        overflow: hidden;
         background-color: var(--gray-500);
-        height: 150px;
-        align-items: right;
+        max-height: 130px;
+        align-items: center;
     }
 
-    .list-container ul {
-        flex-direction: row;
-        display: inline;
-        align-self: right;
-        list-style-type: none;
-        float: right;
-    }
-
-
-    nav li {
-        color: var(--orange-500);
+    nav a {
         font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        color: var(--orange-500);
+        text-decoration: none;
+        float: left;
     }
 
+    .right {
+        display: flex;
+        float: right;
+        align-items: center;
+        margin-right: 75px;
+    }
+
+    .right img {
+        height: 60px;
+    }
+
+    .left {
+        align-items: center;
+        max-width: fit-content;
+        margin-left: 40px;
+    }
+
+    .about {
+        margin-right: 50px;
+        font-size: 18px;
+    }
 </style>

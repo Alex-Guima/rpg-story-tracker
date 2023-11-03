@@ -28,3 +28,7 @@ Route::get('/Login', function() {
 Route::get('/Campaign', function() {
     return view('campaign');
 });
+
+Route::get('/About', function() {
+    return view('about');
+});
