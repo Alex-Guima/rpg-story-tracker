@@ -5,12 +5,12 @@
 </script>
 
 <template>
-    <h1 class="text">RPG STORY TRACKER</h1>
+    <h1>RPG STORY TRACKER</h1>
 </template>
 
 <style scoped>
 
-    .text {
+    h1 {
         color: black;
         text-align: center;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
