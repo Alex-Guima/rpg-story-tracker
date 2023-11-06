@@ -31,10 +31,13 @@
         gap: 10px;
         background: #FEE5C1;
         border-radius: 4px;
-        font-size: medium;   
+        font-size: medium;
     }
 
     .form-field:focus {
+        border: 2px solid var(--orange-800);
+    }
+    .form-field:hover {
         border: 2px solid var(--orange-800);
     }
 </style>

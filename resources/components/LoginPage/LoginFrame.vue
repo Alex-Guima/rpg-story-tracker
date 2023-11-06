@@ -1,16 +1,19 @@
 <script setup>
-import RpgStoryTracker from '../RpgStoryTracker.vue';
+import TitleLogin from './TitleLogin.vue';
 import BtnLogin from './BtnLogin.vue';
 import FormLogin from './FormLogin.vue';
 </script>
 
 <template>
     <div class="container">
-        <RpgStoryTracker />
+        <TitleLogin />
         <FormLogin />
+        <div class="gap">
+            <p>Create account <a href="/SignUp">here</a></p>
+        </div>
         <BtnLogin />
     </div>
-    
+
 </template>
 
 <style scoped>
@@ -24,7 +27,15 @@ import FormLogin from './FormLogin.vue';
         width: 830px;
         height: 805px;
 
-        background-color: #F9EEE5;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.67);
+        font-family: 'Montserrat', sans-serif;
+        color: var(--white);
+    }
+    .gap {
+        height: 80px;
+    }
+
+    p a{
+        text-decoration: none;
+        color: var(--orange-500);
     }
 </style>
