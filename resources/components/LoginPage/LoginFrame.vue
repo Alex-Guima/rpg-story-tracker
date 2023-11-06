@@ -26,8 +26,16 @@ import FormLogin from './FormLogin.vue';
 
         width: 830px;
         height: 805px;
+
+        font-family: 'Montserrat', sans-serif;
+        color: var(--white);
     }
     .gap {
         height: 80px;
+    }
+
+    p a{
+        text-decoration: none;
+        color: var(--orange-500);
     }
 </style>

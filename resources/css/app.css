@@ -14,7 +14,7 @@
     box-shadow: var(--orange-800);
 }
 
-body {
+body, button {
     margin: 0;
     padding: 0;
 }

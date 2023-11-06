@@ -23,6 +23,7 @@ import RpgStoryTracker from '../RpgStoryTracker.vue';
 <style scoped>
 
 .sign-up {
+  font-family: 'Inter', sans-serif;
     background: #f9eee5;
     display: flex;
     flex-direction: column;

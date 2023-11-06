@@ -4,54 +4,79 @@ import RpgStoryTracker from './RpgStoryTracker.vue';
 </script>
 
 <template>
-    <nav>
-        <div class="left">
-            <a href="/"><RpgStoryTracker  /></a>
-        </div>
-        <div class="right">
-            <span class="about"><a href="/About">ABOUT</a></span>
-            <a href=""><img src="../../public/User_Circle.svg" alt="User Icon"></a>
-        </div>
-    </nav>
+    <div class="header-background"></div>
+    <div class="nav">
+        <a href="/" rel="noopener noreferrer"><div class="text-wrapper">HOME</div></a>
+        <a href="/About" rel="noopener noreferrer"><div class="sobre">SOBRE</div></a>
+        <a href="/Login" rel="noopener noreferrer"
+        ><img class="material-symbols" src="../../public/User_Circle.svg"
+        /></a>
+        <div class="text-wrapper-2">RPG STORY TRACKER</div>
+    </div>
 </template>
 
 <style scoped>
+.header-background {
+    position: absolute;
+    width: 100vw;
+    height: 16vh;
+    background-color: #d9d9d9;
+    box-shadow: 0px 4px 4px #00000040;
+  }
 
-    nav {
-        margin: 0;
-        overflow: hidden;
-        background-color: var(--gray-500);
-        max-height: 130px;
-        align-items: center;
-    }
+.nav {
+    position: absolute;
+    width: 92vw;
+    height: 8.5vh;
+    top: 4vh;
+    left: 4vw;
+  }
+  
+  .material-symbols {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0.8vh;
+    left: 87vw;
+  }
 
-    nav a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        color: var(--orange-500);
-        text-decoration: none;
-        float: left;
-    }
+  .text-wrapper {
+    position: absolute;
+    height: 2.5vh;
+    top: 3vh;
+    left: 70vw;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #d04b12;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
 
-    .right {
-        display: flex;
-        float: right;
-        align-items: center;
-        margin-right: 75px;
-    }
+  .text-wrapper-2 {
+    position: absolute;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Girassol";
+    font-weight: 400;
+    color: #1f1919;
+    font-size: 7vh;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
 
-    .right img {
-        height: 60px;
-    }
-
-    .left {
-        align-items: center;
-        max-width: fit-content;
-        margin-left: 40px;
-    }
-
-    .about {
-        margin-right: 50px;
-        font-size: 18px;
-    }
+  .sobre {
+    position: absolute;
+    height: 2.5vh;
+    top: 3vh;
+    left: 79vw;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #d04b12;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
 </style>
