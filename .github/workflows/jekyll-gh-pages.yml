@@ -46,5 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-       - run: npm run dev
-       - run: php artisan serve
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
