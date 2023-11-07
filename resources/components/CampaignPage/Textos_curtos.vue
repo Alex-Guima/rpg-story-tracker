@@ -24,7 +24,8 @@ export default {
   justify-content: center;
   align-items: center;
   height: 560px;
-  margin-right: 400px;
+  margin-right: 600px;
+  margin-bottom: 100px;
 }
 
 .centered-box {
