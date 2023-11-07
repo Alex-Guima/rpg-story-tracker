@@ -24,6 +24,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 560px;
+  margin-right: 200px;
 }
 
 .centered-box {
@@ -31,7 +32,7 @@ export default {
 }
 
 .custom-input {
-  width: 650px;
+  width: 550px;
   height: 65px;
   font-size: 18px;
   border: 2px solid #d04b12;
