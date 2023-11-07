@@ -1,16 +1,40 @@
 <template>
-    <div>
-      <input type="text" v-model="texto" placeholder="Título do RPG" style="width: 651px; height: 60px; font-size: 20px;"><br><br><br>
-      <input type="text" v-model="texto" placeholder="Tema do RPG" style="width: 651px; height: 60px; font-size: 20px;">
+  <div class="container">
+    <div class="centered-box">
+      <input type="text" v-model="texto1" placeholder="Nome do seu RPG" class="custom-input"><br><br><br>
+      <input type="text" v-model="texto2" placeholder="Tema do seu RPG" class="custom-input">
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        texto: ''
-      };
-    }
-  };
-  </script>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      texto1: '',
+      texto2: ''
+    };
+  }
+};
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+}
+
+.centered-box {
+  text-align: center;
+}
+
+.custom-input {
+  width: 650px;
+  height: 65px;
+  font-size: 18px;
+  border: 2px solid #d04b12;
+}
+
+</style>

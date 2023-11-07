@@ -48,10 +48,11 @@
     color: #777;
     position: relative;
     cursor: pointer;
+    top: 300px;
+    left: 50px;
   }
   
   .custom-file-label {
-    background-color: #007BFF;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -73,10 +74,14 @@
     width: 200px;
     height: 300px;
     border: 2px solid #ccc;
+    margin-top: 300px;
+    margin-left: 50px;
   }
   
   img {
     max-width: 100%;
     max-height: 100%;
+    margin-top: 300px;
+    margin-left: 50px;
   }
   </style>
