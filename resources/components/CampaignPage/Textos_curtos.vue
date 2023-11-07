@@ -23,9 +23,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 560px;
-  margin-right: 600px;
-  margin-bottom: 100px;
+  height: 250px;
+  margin-right: 850px;
 }
 
 .centered-box {

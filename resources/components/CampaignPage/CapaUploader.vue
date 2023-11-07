@@ -49,7 +49,7 @@
     position: relative;
     cursor: pointer;
     top: 300px;
-    left: 50px;
+    left: 80px;
   }
   
   .custom-file-label {
