@@ -32,7 +32,7 @@ export default {
 }
 
 .custom-input {
-  width: 550px;
+  width: 450px;
   height: 65px;
   font-size: 18px;
   border: 2px solid #d04b12;
