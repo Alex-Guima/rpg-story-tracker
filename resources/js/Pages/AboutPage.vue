@@ -1,9 +1,12 @@
 <script setup>
-import NavBar from '../NavBar.vue';
+import { Head } from '@inertiajs/vue3'
+import NavBar from '../../components/NavBar.vue';
+
 </script>
 
 <template>
-    <div class="sobre">
+  <Head title="about" />
+    <div class="sobre"> 
         <NavBar />
         <img src="https://images.unsplash.com/photo-1514922121266-75835418bbf1?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dragon breathing fire atop a building">
         <div class="rectangle">

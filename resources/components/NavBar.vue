@@ -1,16 +1,16 @@
 <script setup>
-import RpgStoryTracker from './RpgStoryTracker.vue';
+import { Link } from '@inertiajs/vue3';
 
 </script>
 
 <template>
     <div class="header-background"></div>
     <div class="nav">
-        <a href="/" rel="noopener noreferrer"><div class="text-wrapper">HOME</div></a>
-        <a href="/About" rel="noopener noreferrer"><div class="sobre">SOBRE</div></a>
-        <a href="/Login" rel="noopener noreferrer"
+        <Link href="/"><div class="text-wrapper">HOME</div></Link>
+        <Link href="/about"><div class="sobre">ABOUT</div></Link>
+        <Link href="/login"
         ><img class="material-symbols" src="../../public/User_Circle.svg"
-        /></a>
+        /></Link>
         <div class="text-wrapper-2">RPG STORY TRACKER</div>
     </div>
 </template>

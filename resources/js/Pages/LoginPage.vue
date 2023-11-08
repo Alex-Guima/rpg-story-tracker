@@ -1,6 +1,5 @@
 <script setup>
-import LoginFrame from './LoginFrame.vue';
-
+import LoginFrame from '../../components/LoginPage/LoginFrame.vue';
 </script>
 
 <template>
