@@ -23,8 +23,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  margin-right: 850px;
+  height: 220px;
+  margin-right: 900px;
 }
 
 .centered-box {
@@ -32,8 +32,8 @@ export default {
 }
 
 .custom-input {
-  width: 450px;
-  height: 65px;
+  width: 400px;
+  height: 55px;
   font-size: 18px;
   border: 2px solid #d04b12;
 }

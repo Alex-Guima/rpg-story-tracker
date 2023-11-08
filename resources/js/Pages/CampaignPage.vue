@@ -1,6 +1,9 @@
 <script setup>
 import CapaUploader from '../../components/CampaignPage/CapaUploader.vue';
 import NavBar from '../../components/NavBar.vue';
+import Textos_curtos from '../../components/CampaignPage/Textos_curtos.vue';
+import Texto_Lore from '../../components/CampaignPage/Texto_Lore.vue';
+import Textos_grandes from '../../components/CampaignPage/Textos_grandes.vue';
 
 defineProps({
     currentPage: String,
@@ -12,6 +15,11 @@ defineProps({
         <NavBar />
         <div class="uploader">
             <CapaUploader />
+        </div>
+        <div class="boxes">
+            <Textos_curtos />
+            <Texto_Lore />
+            <Textos_grandes />
         </div>
     </div>
 </template>
