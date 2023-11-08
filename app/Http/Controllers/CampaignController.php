@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateCampaignRequest;
 use App\Http\Resources\CampaignResource;
 use App\Models\Campaign;
 use Illuminate\Http\Request;
@@ -11,12 +12,15 @@ class CampaignController extends Controller
 {
     public function index()
     {
-        $campaign = Campaign::paginate();
         return Inertia::render('CampaignPage');
     }
 
-    public function create()
+    public function store(StoreUpdateCampaignRequest $request)
     {
-        return Inertia::render('CampaignPage');
+        $data = $request->validated();
+
+        $campaign = Campaign::create($data);
+
+        return CampaignResource::collection($campaign);
     }
 }

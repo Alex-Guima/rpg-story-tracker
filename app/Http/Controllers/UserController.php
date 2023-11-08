@@ -15,7 +15,7 @@ class UserController extends Controller
         $users = User::paginate();
 
 
-        return Inertia::render('User', UserResource::collection($users));
+        return Inertia::render('ProfilePage', UserResource::collection($users));
     }
 
     public function store(StoreUpdateUserRequest $request)
@@ -25,18 +25,35 @@ class UserController extends Controller
 
         $user = User::create($data);
 
-        return Redirect::route('users')->with('success', 'User created.');
+        return UserResource::collection($user);
     }
 
     public function create()
     {
-        return Inertia::render('Users/Create');
+        return Inertia::render('SignUpPage');
     }
 
     public function edit(User $user)
     {
-        return Inertia::render('Users/Edit', [
+        return Inertia::render('ProfilePage', [
             'user' => new UserResource($user)
         ]);
+    }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+
+        return Redirect::route('users');
+    }
+
+    public function update(StoreUpdateUserRequest $request)
+    {
+        $data = $request->validated();
+        $data['password'] = bcrypt($request->password);
+
+        $user = User::update($data);
+
+        return UserResource::collection($user);
     }
 }

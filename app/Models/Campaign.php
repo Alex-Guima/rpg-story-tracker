@@ -15,5 +15,6 @@ class Campaign extends Model
         'playerCharacters',
         'plots',
         'description',
+        'campaignImage'
     ];
 }

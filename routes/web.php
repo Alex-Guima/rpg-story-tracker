@@ -35,10 +35,14 @@ Route::delete('campaigns/{campaign}', [CampaignController::class, 'destroy'])->n
 
 // PAGES
 
-Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/', [PageController::class, 'home'])->name('pages.home');
 
-Route::get('about', [PageController::class, 'about'])->name('about');
+Route::get('about', [PageController::class, 'about'])->name('pages.about');
 
-Route::get('login', [PageController::class, 'login'])->name('login');
+Route::get('login', [PageController::class, 'login'])->name('pages.login');
 
-Route::get('signUp', [PageController::class, 'signUp'])->name('signUp');
+Route::get('signUp', [PageController::class, 'signUp'])->name('pages.signUp');
+
+Route::get('campaigns', [PageController::class, 'campaigns'])->name('pages.campaigns');
+
+Route::get('profile', [PageController::class, 'profile'])->name('pages.profile');

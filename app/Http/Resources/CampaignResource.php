@@ -21,6 +21,7 @@ class CampaignResource extends JsonResource
             'playerCharacters' => $this->playerCharacters,
             'plots' => $this->plots,
             'description' => $this->description,
+            'campaignImage' => $this->campaignImage,
         ];
     }
 }

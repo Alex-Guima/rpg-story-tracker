@@ -22,4 +22,12 @@ class PageController extends Controller
     public function signUp() {
         return Inertia::render('SignUpPage');
     }
+
+    public function campaigns() {
+        return Inertia::render('CampaignPage');
+    }
+
+    public function profile() {
+        return Inertia::render('ProfilePage');
+    }
 }

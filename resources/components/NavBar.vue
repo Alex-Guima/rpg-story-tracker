@@ -6,9 +6,9 @@ import { Link } from '@inertiajs/vue3';
 <template>
     <div class="header-background"></div>
     <div class="nav">
-        <Link href="/"><div class="text-wrapper">HOME</div></Link>
-        <Link href="/about"><div class="sobre">ABOUT</div></Link>
-        <Link href="/login"
+        <Link :href="route('pages.home')"><div class="text-wrapper">HOME</div></Link>
+        <Link :href="route('pages.about')"><div class="sobre">ABOUT</div></Link>
+        <Link :href="route('pages.login')"
         ><img class="material-symbols" src="../../public/User_Circle.svg"
         /></Link>
         <div class="text-wrapper-2">RPG STORY TRACKER</div>
@@ -31,7 +31,7 @@ import { Link } from '@inertiajs/vue3';
     top: 4vh;
     left: 4vw;
   }
-  
+
   .material-symbols {
     position: absolute;
     width: 60px;

@@ -22,18 +22,23 @@ class StoreUpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:3|max:255',
+            'username' => 'required|min:3|max:255',
             'email' => [
                 'required',
                 'email',
                 'max:255',
                 'unique:users',
-            ]
+            ],
             'password' => [
                 'required',
                 'min:6',
                 'max:100',
-            ]
+            ],
+
+            'confirmPassword' => [
+                'required',
+                'same:password',
+            ],
 
         ];
     }
