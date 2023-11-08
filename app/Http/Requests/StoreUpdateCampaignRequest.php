@@ -11,7 +11,7 @@ class StoreUpdateCampaignRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class StoreUpdateCampaignRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'campaignName' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'npcs' => 'string',
+            'playerCharacters' => 'string',
+            'plots' => 'string',
+            'campaignImage' => 'file|image|max:5000',
         ];
     }
 }

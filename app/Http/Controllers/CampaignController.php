@@ -21,6 +21,6 @@ class CampaignController extends Controller
 
         $campaign = Campaign::create($data);
 
-        return CampaignResource::collection($campaign);
+        return to_route('campaigns.index');
     }
 }

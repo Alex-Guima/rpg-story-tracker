@@ -14,8 +14,7 @@ class UserController extends Controller
     public function index() {
         $users = User::paginate();
 
-
-        return Inertia::render('ProfilePage');
+        return UserResource::collection($users);
     }
 
     public function store(StoreUpdateUserRequest $request)
@@ -25,7 +24,10 @@ class UserController extends Controller
 
         $user = User::create($data);
 
-        return UserResource::collection($user);
+        auth()->login($user);
+
+        return to_route('login');
+
     }
 
     public function create()
@@ -44,7 +46,8 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return Redirect::route('users');
+        return redirect()->route('users.index')
+        ->with('message', 'User deleted successfully.');
     }
 
     public function update(StoreUpdateUserRequest $request)
@@ -54,6 +57,11 @@ class UserController extends Controller
 
         $user = User::update($data);
 
+        return UserResource::collection($user);
+    }
+
+    public function show(User $user)
+    {
         return UserResource::collection($user);
     }
 }

@@ -8,14 +8,14 @@ import LoginFrame from '../../components/LoginPage/LoginFrame.vue';
             <LoginFrame />
         </div>
     </div>
-    
+
 </template>
 
 <style scoped>
     .container {
         display: flex;
         box-sizing: border-box;
-        
+
         align-items: center;
         justify-content: center;
     }

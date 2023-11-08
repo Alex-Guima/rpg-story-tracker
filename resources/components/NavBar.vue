@@ -8,7 +8,7 @@ import { Link } from '@inertiajs/vue3';
     <div class="nav">
         <Link :href="route('pages.home')"><div class="text-wrapper">HOME</div></Link>
         <Link :href="route('pages.about')"><div class="sobre">ABOUT</div></Link>
-        <Link :href="route('pages.login')"
+        <Link :href="route('login.create')"
         ><img class="material-symbols" src="../../public/User_Circle.svg"
         /></Link>
         <div class="text-wrapper-2">RPG STORY TRACKER</div>

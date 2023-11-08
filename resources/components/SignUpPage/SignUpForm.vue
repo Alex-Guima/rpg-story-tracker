@@ -1,46 +1,38 @@
-<script>
-import { useForm } from '@inertiajs/vue3';
+<script setup>
+import { router } from '@inertiajs/vue3';
+import { reactive } from 'vue';
 
-export default {
-    components: {
-    },
-    setup() {
-        const form = useForm({
-            username: {},
-            email: {},
-            password: {},
-            confirmPassword: {},
-        })
-    return { form }
-    },
-    props: {
-        errors: Object,
+    const form = reactive({
+        username: null,
+        email: null,
+        password: null,
+        confirmPassword: null,
+    });
+
+    function submit() {
+        router.post('/users/register', form)
     }
-}
 </script>
 
 
 <template>
         <div class="container">
 
-            <form @submit.prevent="form.post(route('users.store'))" class="form-cadastro">
+            <form @submit.prevent="submit" class="form-cadastro">
 
                 <label for="username"><span class="username-text">Username</span></label>
-                <input v-model="form.username" class="form-field" type="text">
-                <div class="error-message">{{ errors.username }}</div>
-
+                <input v-model="form.username" class="form-field" type="text" name="username">
 
                 <label for="email">Enter your email</label>
-                <input v-model="form.email" class="form-field" type="email">
-                <div class="error-message">{{ errors.email }}</div>
+                <input v-model="form.email" class="form-field" type="email" name="email">
 
                 <label for="password">Enter your password</label>
-                <input v-model="form.password" class="form-field" type="password">
-                <div class="error-message">{{ errors.password }}</div>
+                <input v-model="form.password" class="form-field" type="password" name="password">
 
                 <label for="confirm-password">Confirm your password</label>
                 <input v-model="form.confirmPassword" class="form-field" type="password">
-                <div class="error-message">{{ errors.confirmPassword }}</div>
+
+
 
                 <button class="btn-cadastro" type="submit">Create Account</button>
             </form>
