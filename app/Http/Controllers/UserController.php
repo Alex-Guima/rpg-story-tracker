@@ -15,7 +15,7 @@ class UserController extends Controller
         $users = User::paginate();
 
 
-        return Inertia::render('ProfilePage', UserResource::collection($users));
+        return Inertia::render('ProfilePage');
     }
 
     public function store(StoreUpdateUserRequest $request)

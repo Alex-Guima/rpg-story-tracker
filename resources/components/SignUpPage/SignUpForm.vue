@@ -1,11 +1,8 @@
 <script>
-import { router, useForm } from '@inertiajs/vue3';
-import FormField from './FormField.vue'
-import FormPasswordField from './FormPasswordField.vue'
+import { useForm } from '@inertiajs/vue3';
 
 export default {
     components: {
-        FormPasswordField,
     },
     setup() {
         const form = useForm({
@@ -83,17 +80,17 @@ export default {
         font-style: normal;
         font-weight: bold;
         line-height: 1.6;
-  }
+    }
 
-  .btn-cadastro:hover {
-    background: var(--orange-800);
-  }
+    .btn-cadastro:hover {
+        background: var(--orange-800);
+    }
 
-  .btn-cadastro:active {
-    box-shadow: black;
-  }
+    .btn-cadastro:active {
+        box-shadow: black;
+    }
 
-  .form-field {
+    .form-field {
         box-sizing: border-box;
 
         width: 400px;

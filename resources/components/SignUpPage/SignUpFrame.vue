@@ -1,14 +1,6 @@
-<script>
+<script setup>
 import SignUpForm from './SignUpForm.vue';
 import RpgStoryTracker from '../RpgStoryTracker.vue';
-
-
-    export default {
-    setup() {
-    },
-    components: { SignUpForm, RpgStoryTracker }
-}
-
 </script>
 
 <template>
