@@ -2,6 +2,7 @@
 import TitleLogin from './TitleLogin.vue';
 import BtnLogin from './BtnLogin.vue';
 import FormLogin from './FormLogin.vue';
+import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import FormLogin from './FormLogin.vue';
         <TitleLogin />
         <FormLogin />
         <div class="gap">
-            <p>Create account <a href="/SignUp">here</a></p>
+            <p>Create account <Link href="/signUp">here</Link></p>
         </div>
         <BtnLogin />
     </div>

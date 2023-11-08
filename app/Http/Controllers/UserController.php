@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateUserRequest;
+use App\Http\Resources\UserResource;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Inertia\Inertia;
 
 class UserController extends Controller
 {
@@ -10,7 +15,7 @@ class UserController extends Controller
         $users = User::paginate();
 
 
-        return UserResource::collection($users);
+        return Inertia::render('User', UserResource::collection($users));
     }
 
     public function store(StoreUpdateUserRequest $request)
@@ -20,6 +25,18 @@ class UserController extends Controller
 
         $user = User::create($data);
 
-        return new UserResource($user);
+        return Redirect::route('users')->with('success', 'User created.');
+    }
+
+    public function create()
+    {
+        return Inertia::render('Users/Create');
+    }
+
+    public function edit(User $user)
+    {
+        return Inertia::render('Users/Edit', [
+            'user' => new UserResource($user)
+        ]);
     }
 }

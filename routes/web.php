@@ -1,34 +1,44 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+//USERS
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('users', [UserController::class, 'index'])->name('users');
 
-Route::get('/SignUp', function() {
-    return view('signUp');
-});
+Route::get('users/create', [UserController::class, 'create'])->name('users.create');
 
-Route::get('/Login', function() {
-    return view('login');
-});
+Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 
-Route::get('/Campaign', function() {
-    return view('campaign');
-});
+Route::put('users/{user}', [UserController::class, 'update'])->name('users.update');
 
-Route::get('/About', function() {
-    return view('about');
-});
+Route::post('users', [UserController::class, 'store'])->name('users.store');
+
+Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+// CAMPAIGNS
+
+Route::get('campaigns', [CampaignController::class, 'index'])->name('campaigns');
+
+Route::get('campaigns/create', [CampaignController::class, 'create'])->name('campaigns.create');
+
+Route::get('campaigns/{campaign}/edit', [CampaignController::class, 'edit'])->name('campaigns.edit');
+
+Route::put('campaigns/{campaign}', [CampaignController::class, 'update'])->name('campaigns.update');
+
+Route::post('campaigns', [CampaignController::class, 'store'])->name('campaigns.store');
+
+Route::delete('campaigns/{campaign}', [CampaignController::class, 'destroy'])->name('campaigns.destroy');
+
+// PAGES
+
+Route::get('/', [PageController::class, 'home'])->name('home');
+
+Route::get('about', [PageController::class, 'about'])->name('about');
+
+Route::get('login', [PageController::class, 'login'])->name('login');
+
+Route::get('signUp', [PageController::class, 'signUp'])->name('signUp');
