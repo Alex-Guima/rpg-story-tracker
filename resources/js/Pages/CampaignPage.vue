@@ -16,6 +16,11 @@ defineProps({
         <div class="uploader">
             <CapaUploader />
         </div>
+        <div class="boxes">
+            <Textos_curtos />
+            <Texto_Lore />
+            <Textos_grandes />
+        </div>
     </div>
 </template>
 
