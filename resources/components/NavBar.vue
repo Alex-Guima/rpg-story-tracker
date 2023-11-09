@@ -12,6 +12,7 @@ import { Link } from '@inertiajs/vue3';
         ><img class="material-symbols" src="../../public/User_Circle.svg"
         /></Link>
         <Link :href="route('pages.dice')"><div class="dice">DICE</div></Link>
+        <Link :href="route('campaigns.create')"><div class="campaigncreate">CAMPAIGN</div></Link>
         <div class="RPG">RPG STORY TRACKER</div>
     </div>
 </template>
@@ -86,6 +87,20 @@ import { Link } from '@inertiajs/vue3';
     height: 2.5vh;
     top: 3vh;
     left: 70vw;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #d04b12;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .campaigncreate {
+    position: absolute;
+    height: 2.5vh;
+    top: 3vh;
+    left: 63vw;
     font-family: "Montserrat";
     font-weight: 500;
     color: #d04b12;
