@@ -46,6 +46,7 @@ Route::inertia('/', 'HomePage')->name('pages.home');
 
 Route::inertia('/about', 'AboutPage')->name('pages.about');
 
+Route::inertia('/dice', 'DicerollerPage')->name('pages.dice');
 
 
 // LOGIN

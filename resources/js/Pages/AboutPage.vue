@@ -8,14 +8,14 @@ import NavBar from '../../components/NavBar.vue';
   <Head title="about" />
     <div class="sobre"> 
         <NavBar />
-        <img src="https://images.unsplash.com/photo-1514922121266-75835418bbf1?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dragon breathing fire atop a building">
+        <img src="https://images.unsplash.com/photo-1560148271-00b5e5850812?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dinossauro na cidade">
         <div class="rectangle">
             <h2>Nosso objetivo com a página:</h2>
-            <div class="cards">
-                <div class="card">
+            <div class="caixatexto">
+                <div class="espaco">
                     <p>Apresentar uma interface simples, porém intuitiva e de fácil uso;</p>
                 </div>
-                <div class="card">
+                <div class="espaco">
                     <p>Auxiliar Mestres de RPG a manter suas campanhas organizadas</p>
                 </div>
             </div>
@@ -54,7 +54,7 @@ h2 {
     height: 341px;
   }
 
-  .card {
+  .espaco {
     height: 100px;
     width: 300px;
     padding: 25px;
@@ -64,7 +64,7 @@ h2 {
     text-align: center;
   }
 
-  .cards {
+  .caixatexto {
     display: flex;
     flex-direction: row;
     justify-content: center;
