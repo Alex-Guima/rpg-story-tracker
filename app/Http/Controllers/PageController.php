@@ -30,4 +30,8 @@ class PageController extends Controller
     public function profile() {
         return Inertia::render('ProfilePage');
     }
+
+    public function dice() {
+        return Inertia::render('DicerollerPage');
+    }
 }
