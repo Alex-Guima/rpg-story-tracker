@@ -13,7 +13,7 @@
       </div>
     </div>
   </template>
-  
+
   <script>
   export default {
     data() {
@@ -32,10 +32,11 @@
     },
   };
   </script>
-  
+
   <style scoped>
   /* Estilos para a área de seleção de arquivo com caixa pontilhada */
   .file-upload-container {
+    box-sizing: border-box;
     width: 200px;
     height: 300px;
     border: 2px solid #ccc;
@@ -51,7 +52,7 @@
     top: 300px;
     left: 80px;
   }
-  
+
   .custom-file-label {
     color: #fff;
     border: none;
@@ -60,15 +61,15 @@
     cursor: pointer;
     background-color: orange;
   }
-  
+
   .custom-file-label:hover {
     background-color: #D04B12;
   }
-  
+
   .custom-file-label:active {
     background-color: #D04B12;
   }
-  
+
   /* Estilos para a área vazia com a imagem dentro */
   .image-container {
     width: 200px;
@@ -77,7 +78,7 @@
     margin-top: 300px;
     margin-left: 50px;
   }
-  
+
   img {
     max-width: 100%;
     max-height: 100%;

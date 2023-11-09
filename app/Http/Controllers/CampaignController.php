@@ -12,7 +12,9 @@ class CampaignController extends Controller
 {
     public function index()
     {
-        return Inertia::render('CampaignPage');
+        return Inertia::render('CampaignPage', [
+            'campaigns' => CampaignResource::collection(Campaign::all()),
+        ]);
     }
 
     public function store(StoreUpdateCampaignRequest $request)
@@ -21,6 +23,31 @@ class CampaignController extends Controller
 
         $campaign = Campaign::create($data);
 
+        if($request->hasFile('campaignImage')) {
+            $campaign->addMediaFromRequest('campaignImage')->toMediaCollection('campaigns');
+        }
+
         return to_route('campaigns.index');
+    }
+
+    public function update(StoreUpdateCampaignRequest $request, Campaign $campaign)
+    {
+        $data = $request->validated();
+
+        $campaign->update($data);
+
+        return to_route('campaigns.index');
+    }
+
+    public function destroy(Campaign $campaign)
+    {
+        $campaign->delete();
+
+        return to_route('campaigns.index');
+    }
+
+    public function create()
+    {
+        return Inertia::render('CampaignCreatePage');
     }
 }

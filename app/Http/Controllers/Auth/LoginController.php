@@ -15,7 +15,7 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        return to_route('campaigns');
+        return to_route('campaigns.create');
     }
 
     public function create()

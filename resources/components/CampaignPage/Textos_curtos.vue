@@ -1,9 +1,7 @@
 <template>
   <div class="container">
-    <div class="centered-box">
-      <input type="text" v-model="texto1" placeholder="Nome do seu RPG" class="custom-input"><br><br><br>
-      <input type="text" v-model="texto2" placeholder="Tema do seu RPG" class="custom-input">
-    </div>
+      <input type="text" v-model="name" placeholder="Nome do seu RPG" class="custom-input"><br><br><br>
+      <input type="text" v-model="theme" placeholder="Tema do seu RPG" class="custom-input">
   </div>
 </template>
 
@@ -11,8 +9,8 @@
 export default {
   data() {
     return {
-      texto1: '',
-      texto2: ''
+      name: '',
+      theme: ''
     };
   }
 };
@@ -20,15 +18,9 @@ export default {
 
 <style scoped>
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 220px;
-  margin-right: 900px;
-}
-
-.centered-box {
-  text-align: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 
 .custom-input {

@@ -13,8 +13,7 @@ class Campaign extends Model
         'campaignName',
         'npcs',
         'playerCharacters',
-        'plots',
+        'scenarios',
         'description',
-        'campaignImage'
     ];
 }
