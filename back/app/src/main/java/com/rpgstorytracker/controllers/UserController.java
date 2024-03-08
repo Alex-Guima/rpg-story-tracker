@@ -35,7 +35,7 @@ public class UserController {
   }
 
   @GetMapping("/users")
-  public List<User> getAll() {
+  public List<User> getAllUsers() {
     return userRepository.findAll();
   }
 
@@ -45,7 +45,7 @@ public class UserController {
   }
 
   @PutMapping("/users/{userId}")
-  User updateUser(@RequestBody User newUser, @PathVariable UUID userId) {
+  public User updateUser(@RequestBody User newUser, @PathVariable UUID userId) {
     return userRepository.findById(userId).map(user -> {
       user.setName(newUser.getName());
       user.setPassword(newUser.getPassword());
