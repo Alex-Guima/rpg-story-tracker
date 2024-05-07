@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: back/app/
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - ./back:/root
+    ports:
+      - "8000:8000"
+    env_file: .env
+    depends_on:
+      - postgres
+
+  frontend:
+    stdin_open: true
+    build:
+      context: front/app/
+      target: dev
+    volumes:
+      - ./front:/root
+    ports:
+      - "3000:3000"
+
+  postgres:
+    build: postgres
+    volumes:
+      - ./back/app/sql/schema:/docker-entrypoint-initdb.d/schema
+
