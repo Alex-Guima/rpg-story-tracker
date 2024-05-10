@@ -2,52 +2,53 @@ package controller
 
 import (
 	"database/sql"
-	"fmt"
 	"net/http"
-	"os"
 
+	db "github.com/Alex-Guima/rpg-story-tracker/internal/db/queries"
 	"github.com/Alex-Guima/rpg-story-tracker/internal/model"
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
-func openDbConnection() *sql.DB {
-	Db, err := sql.Open("pgx", os.Getenv("DATABASE_URL"))
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to open DB connection")
-		os.Exit(1)
-	}
-
-	return Db
-}
+var dbConn *sql.DB
 
 func GetUsers(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, model.Users)
-}
+	users, err := dbConn.Query(db.GetUsersQuery)
 
-func PostUsers(c *gin.Context) {
-	Db := openDbConnection()
-	var newUser model.User
-	if err := c.BindJSON(&newUser); err != nil {
-		return
+	if err != nil {
+		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "User does not exist"})
 	}
 
-	defer Db.Close()
+	c.IndentedJSON(http.StatusFound, users)
+}
+func PostUsers(c *gin.Context) {
+	user := &model.User{}
 
-	Db.Exec("INSERT INTO users (username, email, password) VALUES (?, ?, ?)", newUser.Username, newUser.Email, newUser.Password)
+	if err := c.BindJSON(user); err != nil {
+		c.IndentedJSON(http.StatusInternalServerError, gin.H{"message": "User already exists"})
+	}
+	user_id, err := uuid.NewRandom()
+	if err != nil {
+		c.IndentedJSON(http.StatusInternalServerError, gin.H{"message": "Error while generating UUID"})
+	}
+	user.HashPassword()
+	_, err = dbConn.Query(db.CreateUserQuery, user_id, user.Username, user.Password, user.Email)
 
-	c.IndentedJSON(http.StatusCreated, newUser)
+	if err != nil {
+		c.IndentedJSON(http.StatusInternalServerError, gin.H{"message": "User already exists"})
+	}
+	c.IndentedJSON(http.StatusCreated, user)
 }
 
 func GetUserById(c *gin.Context) {
 	id := c.Param("id")
 
-	for _, u := range model.Users {
-		if u.ID == id {
-			c.IndentedJSON(http.StatusOK, u)
-			return
-		}
+	user, err := dbConn.Query(db.GetUserByIDQuery, id)
+
+	if err != nil {
+		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "user not found"})
 	}
 
-	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "user not found"})
+	c.IndentedJSON(http.StatusFound, user)
 }

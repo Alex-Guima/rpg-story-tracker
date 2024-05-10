@@ -1,5 +1,7 @@
-FROM golang:1.22.3-bookworm
+FROM golang:1.22.3-bookworm as dev
 WORKDIR /app
-COPY /app .
-RUN go run .
-EXPOSE 8000
+COPY /app/go.mod /app/go.sum ./app
+
+COPY /app /app
+
+CMD ["go", "run", "."]

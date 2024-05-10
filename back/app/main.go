@@ -1,14 +1,11 @@
 package main
 
 import (
-	"github.com/Alex-Guima/rpg-story-tracker/internal/controller"
-	"github.com/gin-gonic/gin"
+	"github.com/Alex-Guima/rpg-story-tracker/internal/api"
+	"github.com/Alex-Guima/rpg-story-tracker/internal/config"
 )
 
 func main() {
-	router := gin.Default()
-	router.GET("/users", controller.GetUsers)
-	router.GET("/users/:id", controller.GetUserById)
-	router.POST("/users", controller.PostUsers)
-	router.Run("localhost:8080")
+	config.InitConfig()
+	api.StartServer()
 }

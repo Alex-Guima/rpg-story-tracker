@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS rpg-story-tracker_db
