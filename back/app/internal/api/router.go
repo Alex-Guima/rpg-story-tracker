@@ -5,6 +5,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// func WithDB(fn func(c *gin.Context, db *sql.DB) error, db *sql.DB) func(c *gin.Context) error {
+// 	return func(c *gin.Context) error {
+// 		return fn(c, db)
+// 	}
+// }
+
 func httpServer() *gin.Engine {
 	engine := gin.Default()
 	api := engine.Group("/")

@@ -1,9 +1,6 @@
 package api
 
 import (
-	"database/sql"
-	"os"
-
 	"github.com/Alex-Guima/rpg-story-tracker/internal/config"
 	"github.com/Alex-Guima/rpg-story-tracker/internal/db"
 	"github.com/apex/log"
@@ -14,7 +11,7 @@ import (
 var server *gin.Engine
 
 func StartServer() {
-	conn, err := sql.Open("pgx", os.Getenv("DATABASE_URL"))
+	conn, err := db.ConnectDB()
 	if err != nil {
 		log.WithField("reason", err.Error()).Fatal("Db connection error occurred")
 	}
